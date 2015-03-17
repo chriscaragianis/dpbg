@@ -4,7 +4,14 @@ public class Board {
 	private List<Edge> edges;
 	private List<Agent> agents;
 	
-	public void addEdge
-	public void update
+	public Board()
+	{
+		nodes = new ArrayList<Node>();
+		edges = new ArrayList<Edge>();
+		agents = new ArrayList<Agent>();
+	}
+	
+	public void addEdge()
+	public void update()
 	
 	
