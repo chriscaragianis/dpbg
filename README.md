@@ -1,7 +1,7 @@
 "You have no way of knowing what is going happen because of what you did,
 	you can only try to do good things"
 	
-An API for Dynamic Positional Board Games
+A Framework for Dynamic Positional Board Games
 
 	The idea is to create a positional game wherein the mechanism is 
 	too complex to be understood.  For the game to be fun, players must 
@@ -12,6 +12,11 @@ An API for Dynamic Positional Board Games
 	      has Agent(s)
 		  does update
 			   which checks for input 
+			   moves players
+			   alters board
+			   reports
               
-			   addEdge
+			   
+		  
+
 		  
