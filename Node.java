@@ -2,8 +2,11 @@ import java.util.*;
 
 abstract class Node
 {
-	private Hashtable<String, int> doorLabels;
-	private int doorDestinations;
+	private Hashtable<String, Integer> doorLabels;
+	private int[] doorDestinations;
+	
+	public abstract void addNbr();
+	
 }
 
 	
