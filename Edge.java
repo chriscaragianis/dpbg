@@ -1,4 +1,18 @@
-public class Edge
+/**
+ * 
+ */
 
-	public int start
-	public int end
+/**
+ * @author chriscaragianis
+ *
+ */
+public abstract class Edge {
+
+	/**
+	 * 
+	 */
+	public Edge() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

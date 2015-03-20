@@ -1,5 +1,10 @@
-public class Agent
-
-	private int loc
+abstract class Agent
+{
+	protected Node loc;
 	
-	public void move
+	abstract public Node moveQuery();
+	abstract public void setLoc(Node l);
+	abstract public Node getLoc();
+	
+	
+}	

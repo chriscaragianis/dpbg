@@ -2,11 +2,24 @@ import java.util.*;
 
 abstract class Board {
 
-	private List<Node> nodes;
-	private List<Agent> agents;
+	protected List<Node> nodes;
+	protected List<Agent> agents;
 	
-	public void addEdge(){};
-	public void update(){};
+	abstract protected void addEdge(int tail, int head);
+	//abstract protected  
+	
+	public void update()
+	{
+		Node target;
+		for (Agent v: agents)
+		{
+			target = v.moveQuery();
+			if (target.isOpen(v.getLoc()))
+				v.setLoc(target);
+	
+		}
+	}
+	
 	
 }
 	
