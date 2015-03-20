@@ -1,11 +1,30 @@
 import java.util.*;
 
-abstract class Node
+public class Node
 {
+	private String label;
 	private Hashtable<String, Node> doorLabels;
 	
-	abstract public void addNbr();
-	abstract public boolean isOpen(Node source);
+	public Node(String lbl)
+	{
+		label = lbl;
+		doorLabels = new Hashtable<String, Node>();
+	}
+	
+	public String getLabel()
+	{
+		return label;
+	}
+	
+	public void addNbr(String key, Node nd)
+	{
+		doorLabels.put(key, nd);
+	}
+	
+	public boolean isOpen(Node source)
+	{
+		return true;
+	}
 	
 	public Node getDir(String key)
 	{

@@ -18,35 +18,18 @@ public class TestBoard extends Board {
 		nodes = new ArrayList<Node>();
 		agents = new ArrayList<Agent>();
 		
-		nodes.add(new Compass4Node());
+		nodes.add(new Node("UpLeft"));
+		nodes.add(new Node("UpRight"));
+		nodes.add(new Node("DownRight"));
+		nodes.add(new Node("DownLeft"));
+		
+		nodes.get(0).addNbr("East", nodes.get(1));
+		nodes.get(1).addNbr("South", nodes.get(2));
+		nodes.get(2).addNbr("West", nodes.get(3));
+		nodes.get(3).addNbr("East", nodes.get(0));
+		
 		agents.add(new ConsoleInputAgent());
+		agents.get(0).setLoc(nodes.get(0));
 	}
-	
-	/**
-	 *
-	 */
-	 private void addEdge(int tail, int head)
-	    {
-	       
-	        List<Integer> candidates = new ArrayList<Integer>();
-	        for (int i = 0; i < rooms.size(); i++)
-	            if (rooms.get(i).isOpen() && i != index && !rooms.get(index).isNbr(i))
-	            {
-	                candidates.add(i);
-	            }
-	        for (int j = 0; j < candidates.size(); j++)
-	            if (choice <= (double)(j + 1)/(candidates.size() + 1))
-	            {
-	                rooms.get(index).connect(candidates.get(j));
-	                rooms.get(candidates.get(j)).connect(index);
-	                return;
-	            }
-	        rooms.add(new Room());
-	        rooms.get(index).connect(rooms.size()-1);
-	        rooms.get(rooms.size()-1).connect(index);
-	    }
-	/**
-	 *
-	 */
 	
 }

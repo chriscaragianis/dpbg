@@ -17,7 +17,7 @@ public class UndirEdge extends Edge {
 	public UndirEdge(int t, int h) 
 	{
 		tail = t;
-		head = h
+		head = h;
 	
 	}
 	
