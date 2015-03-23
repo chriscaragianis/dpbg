@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.Console;
 
 /**
  * 
@@ -17,14 +16,21 @@ public class ConsoleInputAgent extends Agent {
  public ConsoleInputAgent() {
   
  	}
- public Node moveQuery()
+ @Override
+public Node getLoc()
+ {
+  return loc;
+ }
+ 
+ @Override
+public Node moveQuery()
  {
 	 System.out.println("You are at " + loc.getLabel());
 	 
 	 Scanner in = new Scanner(System.in);
 	 while(!in.hasNextLine()){};
 	 String dir = in.nextLine();
-	 in.close();
+	 //in.close();
 	 if (loc.checkDir(dir))
 	  return loc.getDir(dir);
 	 else 
@@ -33,14 +39,10 @@ public class ConsoleInputAgent extends Agent {
 		 return loc;
 	 }
  }
- 
- public void setLoc(Node l)
+ @Override
+public void setLoc(Node l)
  {
   loc = l;
- }
- public Node getLoc()
- {
-  return loc;
  }
 
 }

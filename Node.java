@@ -11,19 +11,14 @@ public class Node
 		doorLabels = new Hashtable<String, Node>();
 	}
 	
-	public String getLabel()
-	{
-		return label;
-	}
-	
 	public void addNbr(String key, Node nd)
 	{
 		doorLabels.put(key, nd);
 	}
 	
-	public boolean isOpen(Node source)
+	public boolean checkDir(String key)
 	{
-		return true;
+		return doorLabels.containsKey(key);
 	}
 	
 	public Node getDir(String key)
@@ -31,9 +26,17 @@ public class Node
 		return doorLabels.get(key);
 	}
 	
-	public boolean checkDir(String key)
+	public String getLabel()
 	{
-		return doorLabels.containsKey(key);
+		return label;
+	}
+	
+	public boolean isOpen(Node source)
+	{
+		if (!source.equals(this))
+			return true;
+		return false;
+		
 	}
 	
 	
