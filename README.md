@@ -1,21 +1,11 @@
-"You have no way of knowing what is going happen because of what you did,
-	you can only try to do good things"
-	
-A Framework for Dynamic Positional Board Games
+---
+layout: default
+title: Dynamic Positional Board Games
+___
 
-	The idea is to create a positional game wherein the mechanism is 
-	too complex to be understood.  For the game to be fun, players must 
-	be able to develop heuristics that help them make sense of their choices.  
-	
-	Board is made of Node(s)
-		  and Edge(s)
-	      has Agent(s)
-		  does update
-			   which checks for input 
-			   moves players
-			   alters board
-			   reports
-              
+It would be neat if there was a nice way of describing a 
+board game that updated its topology based on player action.
+That's this thing.`
 			   
 		  
 
